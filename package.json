@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/patilreena/node-exercises/issues"
   },
-  "homepage": "https://github.com/patilreena/node-exercises#readme"
+  "homepage": "https://github.com/patilreena/node-exercises#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2"
+  }
 }

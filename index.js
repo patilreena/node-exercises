@@ -1,19 +1,13 @@
-const http = require('http');
-const fs = require('fs');
-const port = 3000;
+const express = require('express');
+const bodyParser = require('body-parser');
+const path = require('path');
 
-fs.readFile('index.html', (err, html) => {
-  if (err) {
-    throw err;
-  }
-  const server = http.createServer((req, res) => {
-    res.statusCode = 200;
-    res.setHeader('content-type', 'text/html');
-    res.write(html);
-    res.end();
-  });
+const app = express();
 
-  server.listen(port, () => {
-    console.log('Sever is running on' + port);
-  });
+app.get('/', function(req, res) {
+  res.send('Hello Express');
+});
+
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
 });
